@@ -1,0 +1,262 @@
+ASHARE_TRANSACTION:
+  start_date: 20150101
+  ref_date_field: TRADE_DT
+  mode: a
+  db: TICK
+  fields:
+    S_INFO_WINDCODE   : sid
+    TRADE_DT          : DataDate
+    TRADE_TIME        : trade_time
+    S_DQ_PRICE        : price
+    S_DQ_QUANTITY     : quantity
+    S_DQ_SIDE         : side
+    S_RESERVED_ID     : reserved_id
+
+ASHARE_EOD_PRICES:
+  start_date: 20060101
+  mode: a
+  ref_date_field: TRADE_DT
+  db: BASE
+  fields:
+    S_INFO_WINDCODE         : sid
+    TRADE_DT                : DataDate
+    S_DQ_OPEN               : open
+    S_DQ_HIGH               : high
+    S_DQ_LOW                : low
+    S_DQ_CLOSE              : close
+    S_DQ_VOLUME             : volume
+    S_DQ_AMOUNT             : amount
+    S_DQ_ADJFACTOR          : adj_factor
+    S_DQ_PRECLOSE           : pre_close
+    S_DQ_ADJPRECLOSE        : adj_pre_close
+    S_DQ_ADJOPEN            : adj_open
+    S_DQ_ADJHIGH            : adj_high
+    S_DQ_ADJLOW             : adj_low
+    S_DQ_ADJCLOSE           : adj_close
+    S_DQ_AVGPRICE           : ave_price
+    S_DQ_CHANGE             : change
+    S_DQ_PCTCHANGE          : ret
+    S_DQ_TURNOVER_RATE      : turnover_rate
+    S_DQ_FULL_TURNOVER_RATE : full_turnover_rate
+    S_DQ_TRADESTATUS        : trade_status
+
+AINDEX_EOD_PRICES:
+  start_date: 20060101
+  ref_date_field: TRADE_DT
+  mode: a
+  db: BASE
+  fields:
+    S_INFO_WINDCODE : sid
+    TRADE_DT        : DataDate
+    S_DQ_OPEN       : open
+    S_DQ_HIGH       : high
+    S_DQ_LOW        : low
+    S_DQ_CLOSE      : close
+    S_DQ_PRECLOSE   : preclose
+    S_DQ_VOLUME     : vol
+    S_DQ_AMOUNT     : amount
+    S_DQ_CHANGE     : change
+    S_DQ_PCTCHANGE  : ret
+
+ASHARE_EOD_DERIVATIVE_INDICATOR:
+  start_date: 20120501
+  mode: a
+  ref_date_field: TRADE_DT
+  db: BASE
+  fields:
+    S_INFO_WINDCODE   : sid
+    TRADE_DT          : DataDate
+    S_VAL_TOTAL_MV    : mktcap
+    S_VAL_CIRCLE_MV   : fltcap
+    S_VAL_PE          : pe
+    S_VAL_PE_TTM      : pe_ttm
+    S_VAL_PB_NEW      : pb
+    S_VAL_PCF_OCF     : pcf
+    S_VAL_PCF_OCFTTM  : pcf_ttm
+    S_VAL_PCF_NCF     : pcf_ncf
+    S_VAL_PCF_NCFTTM  : pcf_ncf_ttm
+    S_VAL_PS          : ps
+    S_VAL_PS_TTM      : ps_ttm
+    S_VAL_TURNOVER_RATE : turnover
+    S_VAL_VOLUME_RATIO  : volume_ratio
+    S_VAL_PRICE_DIV_DPS     : div_dps
+    NET_PROFIT_PARENT_COMP_TTM  : ppc_ttm
+    NET_PROFIT_PARENT_COMP_LYR  : ppc_lyr
+    NET_CASH_FLOWS_OPER_ACT_TTM : cash_flow_ttm
+    NET_CASH_FLOWS_OPER_ACT_LYR : cash_flow_lyr
+    OPER_REV                    : rev
+    OPER_REV_LYR                : rev_lyr
+    NET_INCR_CASH_CASH_EQU_TTM  : cash_equ_ttm
+    NET_INCR_CASH_CASH_EQU_LYR  : cash_equ_lyr
+    S_VAL_TOTAL_SHARES      : _tot_share
+    S_VAL_FLOAT_SHARES      : _float_share
+    S_VAL_FREE_FLOAT_SHARES : _free_share
+    S_VAL_NET_ASSETS        : _net_asset
+    UP_DOWN_LIMIT_STATUS    : if_limit
+
+ASHARE_MONEY_FLOW:
+    start_date: 20060101
+    ref_date_field: TRADE_DT
+    mode: a
+    db: BASE
+    fields:
+      S_INFO_WINDCODE               : sid
+      TRADE_DT                      : DataDate
+      MFW_NET_INFLOW_AMOUNT         : mfw_net_inflow
+      MFW_NET_INFLOW_RATE           : mfw_net_inflow_rate
+      SUPER_LARGE_NET_INFLOW_AMOUNT : super_large_net_inflow
+      SUPER_LARGE_NET_INFLOW_RATE   : super_large_net_inflow_rate
+      LARGE_NET_INFLOW_AMOUNT       : large_net_inflow
+      LARGE_NET_INFLOW_RATE         : large_net_inflow_rate
+      MIDDLE_NET_INFLOW_AMOUNT      : middle_net_inflow
+      MIDDLE_NET_INFLOW_RATE        : middle_net_inflow_rate
+      SMALL_NET_INFLOW_AMOUNT       : small_net_inflow
+      SMALL_NET_INFLOW_RATE         : small_net_inflow_rate
+
+ASHARE_1MIN:
+  start_date: 20060101
+  mode: a
+  ref_date_field: TRADE_DT
+  db: BAR
+  fields:
+    S_INFO_WINDCODE         : sid
+    TRADE_DT                : DataDate
+    TRADE_BAR_TIME          : TradeTime
+    S_DQ_OPEN               : open
+    S_DQ_HIGH               : high
+    S_DQ_LOW                : low
+    S_DQ_CLOSE              : close
+    S_DQ_VOLUME             : volume
+    S_DQ_AMOUNT             : amount
+    S_DQ_ADJFACTOR          : adj_factor
+    S_DQ_PRECLOSE           : pre_close
+    S_DQ_ADJOPEN            : adj_open
+    S_DQ_ADJHIGH            : adj_high
+    S_DQ_ADJLOW             : adj_low
+    S_DQ_ADJCLOSE           : adj_close
+    S_DQ_AVGPRICE           : ave_price
+    S_DQ_CHANGE             : change
+    S_DQ_PCTCHANGE          : ret
+    S_DQ_TRADESTATUS        : trade_status
+
+ASHARE_TICKER:
+  start_date: 20060101
+  mode: a
+  ref_date_field: TRADE_DT
+  db: TICK
+  fields:
+    S_INFO_MARKET           : exchange
+    S_INFO_CODE             : code
+    S_INFO_WINDCODE         : sid
+    TRADE_DT                : DataDate
+    TRADE_TIME              : TradeTime
+    S_DQ_TRADE_TIMES        : busin_times
+    S_DQ_SIDE               : side
+    S_DQ_VOLUME             : volume
+    S_DQ_AMOUNT             : amount
+    S_DQ_LAST_PRICE         : last_price
+    S_DQ_BID_PRICE1         : bid_price1
+    S_DQ_BID_PRICE2         : bid_price2
+    S_DQ_BID_PRICE3         : bid_price3
+    S_DQ_BID_PRICE4         : bid_price4
+    S_DQ_BID_PRICE5         : bid_price5
+    S_DQ_BID_QUANTITY1      : bid_qty1
+    S_DQ_BID_QUANTITY2      : bid_qty2
+    S_DQ_BID_QUANTITY3      : bid_qty3
+    S_DQ_BID_QUANTITY4      : bid_qty4
+    S_DQ_BID_QUANTITY5      : bid_qty5
+    S_DQ_ASK_PRICE1         : ask_price1
+    S_DQ_ASK_PRICE2         : ask_price2
+    S_DQ_ASK_PRICE3         : ask_price3
+    S_DQ_ASK_PRICE4         : ask_price4
+    S_DQ_ASK_PRICE5         : ask_price5
+    S_DQ_ASK_QUANTITY1      : ask_qty1
+    S_DQ_ASK_QUANTITY2      : ask_qty2
+    S_DQ_ASK_QUANTITY3      : ask_qty3
+    S_DQ_ASK_QUANTITY4      : ask_qty4
+    S_DQ_ASK_QUANTITY5      : ask_qty5
+
+ASHARE_DESCRIPTION:
+  start_date          : 20160101
+  ref_date_field      : S_INFO_LISTDATE
+  mode                : r
+  db                  : BASE
+  fields:
+    S_INFO_WINDCODE   : sid
+    S_INFO_LISTDATE   : DataDate
+    S_INFO_DELISTDATE : delist_date
+    S_INFO_STOCK_NAME : stock_name
+
+ASHARE_CALENDAR:
+  start_date      : 20160101
+  ref_date_field  : TRADE_DAYS
+  mode: r
+  db: BASE
+  fields:
+    TRADE_DAYS: DataDate
+    S_INFO_EXCHMARKET: ExchangeMkt
+
+ASHARE_INDUSTRIES_CLASS:
+  start_date: 20160101
+  ref_date_field: TRADE_DT
+  mode: r
+  db: BASE
+  fields:
+    S_INFO_WINDCODE : sid
+    TRADE_DT        : DataDate
+    INDUSTRY_NAME   : industry_name
+    DATA_SOURCE     : data_source
+    STOCK_NAME      : stock_name
+    LEVEL_NUM       : level_num
+
+ASHARE_INDUSTRIES_CLASS_INOUT:
+  start_date: 20160101
+  ref_date_field: ACTION_DT
+  mode: r
+  db: BASE
+  fields:
+    SEQUENCE        : id
+    ACTION_DT       : action_date
+    INDUSTRY_NAME   : industry_name
+    DATA_SOURCE     : data_source
+    STOCK_CODE      : code
+    STOCK_NAME      : stock_name
+    ACTION          : action
+
+ASHARE_ST:
+  start_date: 20160101
+  ref_date_field: ENTRY_DT
+  mode: r
+  db: BASE
+  fields:
+    S_INFO_WINDCODE: sid
+    ENTRY_DT       : DataDate
+    REMOVE_DT      : removedate
+    S_TYPE_ST      : st_type
+    ANN_DT         : anndate
+
+ASHARE_TRADING_SUSPENSION:
+  start_date: 20060101
+  ref_date_field: S_DQ_SUSPENDDATE
+  mode: r
+  db: BASE
+  fields:
+    S_INFO_WINDCODE   : sid
+    S_DQ_SUSPEND_DATE : DataDate
+    S_DQ_SUSPEND_TIME : suspend_time
+    S_DQ_RESUME_DATE  : resume_date
+    S_DQ_RESUME_TIME  : resume_time
+    S_DQ_SUSPEND_TYPE : suspend
+    S_INFO_REASON     : reason
+
+AINDEX_HS300_FREE_WEIGHT:
+  start_date: 20050101
+  ref_date_field: TRADE_DT
+  mode: a
+  db: BASE
+  fields:
+    S_INDEX_WINDCODE  : iid
+    S_INFO_WINDCODE   : sid
+    S_STOCK_NAME      : stock_name
+    TRADE_DT          : DataDate
+    I_WEIGHT          : weight
