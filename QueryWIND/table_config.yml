@@ -1,0 +1,184 @@
+ASHAREEODPRICES:
+  start_date: 20060101
+  mode: a
+  ref_date_field: TRADE_DT
+  fields:
+    S_INFO_WINDCODE: sid
+    TRADE_DT       : DataDate
+    S_DQ_PRECLOSE  : pre_close
+    S_DQ_OPEN      : open
+    S_DQ_HIGH      : high
+    S_DQ_LOW       : low
+    S_DQ_CLOSE     : close
+    S_DQ_CHANGE    : change
+    S_DQ_PCTCHANGE : ret
+    S_DQ_VOLUME    : volume
+    S_DQ_AMOUNT    : amount
+    S_DQ_ADJPRECLOSE: adj_preclose
+    S_DQ_ADJOPEN   : adj_open
+    S_DQ_ADJHIGH   : adj_high
+    S_DQ_ADJLOW    : adj_low
+    S_DQ_ADJCLOSE  : adj_close
+    S_DQ_ADJFACTOR : adjfactor
+    S_DQ_AVGPRICE  : ave_price
+    S_DQ_TRADESTATUS: trade_status
+
+ASHAREEODDERIVATIVEINDICATOR:
+  start_date: 20060101
+  mode: a
+  ref_date_field: TRADE_DT
+  fields:
+    S_INFO_WINDCODE   : sid
+    TRADE_DT          : DataDate
+    S_VAL_MV          : mktcap
+    S_DQ_MV           : fltcap
+    S_VAL_PE          : pe
+    S_VAL_PB_NEW      : pb
+    S_VAL_PE_TTM      : pe_ttm
+    S_VAL_PCF_OCF     : pcf
+    S_VAL_PCF_OCFTTM  : pcf_ttm
+    S_VAL_PCF_NCF     : pcf_ncf
+    S_VAL_PCF_NCFTTM  : pcf_ncf_ttm
+    S_VAL_PS          : ps
+    S_VAL_PS_TTM      : ps_ttm
+    S_DQ_FREETURNOVER : turnover
+    S_PRICE_DIV_DPS   : div_dps
+    NET_PROFIT_PARENT_COMP_TTM : ppc_ttm
+    NET_PROFIT_PARENT_COMP_LYR : ppc_lyr
+    NET_CASH_FLOWS_OPER_ACT_TTM: cash_flow_ttm
+    NET_CASH_FLOWS_OPER_ACT_LYR: cash_flow_lyr
+    OPER_REV_TTM      : rev_ttm
+    OPER_REV_LYR      : rev_lyr
+    NET_INCR_CASH_CASH_EQU_TTM: cash_equ_ttm
+    NET_INCR_CASH_CASH_EQU_LYR: cash_equ_lyr
+    UP_DOWN_LIMIT_STATUS: if_limit
+    TOT_SHR_TODAY    :  _tot_share
+    FLOAT_A_SHR_TODAY: _float_share
+    FREE_SHARES_TODAY: _free_share
+    NET_ASSETS_TODAY :  _net_asset
+
+
+ASHARETRADINGSUSPENSION:
+  start_date:
+  ref_date_field: S_DQ_SUSPENDDATE
+  mode: r
+  fields:
+    S_INFO_WINDCODE : sid
+    S_DQ_SUSPENDDATE: DataDate
+    S_DQ_SUSPENDTYPE: suspend
+
+ASHAREL2INDICATORS:
+  start_date: 20060101
+  ref_date_field: TRADE_DT
+  mode: a
+  fields:
+    S_INFO_WINDCODE: sid
+    TRADE_DT       : DataDate
+    S_LI_INITIATIVEBUYRATE: buyrate1
+    S_LI_INITIATIVESELLRATE: sellrate1
+    S_LI_LARGEBUYRATE     : buyrate2
+    S_LI_LARGESELLRATE    : sellrate2
+    S_LI_ENTRUSTRATE       : entrustr
+
+ASHAREMONEYFLOW:
+    start_date: 20060101
+    ref_date_field: TRADE_DT
+    mode: a
+    fields:
+      S_INFO_WINDCODE             : sid
+      TRADE_DT                    : DataDate
+      NET_INFLOW_RATE_VOLUME      : net_in_rate
+      OPEN_NET_INFLOW_RATE_VOLUME : net_open_in_rate
+      CLOSE_NET_INFLOW_RATE_VOLUME: net_close_in_rate
+      MONEYFLOW_PCT_VOLUME        : money_flow_rate
+      OPEN_MONEYFLOW_PCT_VOLUME   : open_money_flow
+      CLOSE_MONEYFLOW_PCT_VOLUME  : close_money_flow
+      NET_INFLOW_RATE_VOLUME_L    : net_in_rate_l
+      NET_INFLOW_RATE_VALUE_L     : net_in_rate_l2
+      MONEYFLOW_PCT_VOLUME_L      : money_flow_vol
+      MONEYFLOW_PCT_VALUE_L       : money_flow_value
+      OPEN_NET_INFLOW_RATE_VOLUME_L: net_open_in_rate2
+      OPEN_NET_INFLOW_RATE_VALUE_L: net_open_in_rate3
+      OPEN_MONEYFLOW_PCT_VOLUME_L : open_money_flow2
+      OPEN_MONEYFLOW_PCT_VALUE_L  : open_money_flow3
+      CLOSE_NET_INFLOW_RATE_VOLUME_L: net_close_in_rate2
+      CLOSE_NET_INFLOW_RATE_VALU_L: net_close_in_rate3
+      CLOSE_MONEYFLOW_PCT_VOLUME_L: close_money_flow2
+      CLOSE_MONEYFLOW_PCT_VALUE_L : close_money_flow3
+
+
+ASHAREDESCRIPTION:
+  start_date:
+  ref_date_field: S_INFO_LISTDATE
+  mode: r
+  fields:
+    S_INFO_WINDCODE: sid
+    S_INFO_LISTDATE: DataDate
+    S_INFO_DELISTDATE: delist_date
+
+
+ASHAREST:
+  start_date:
+  ref_date_field: ENTRY_DT
+  mode: r
+  fields:
+    S_INFO_WINDCODE: sid
+    ENTRY_DT       : DataDate
+    REMOVE_DT      : removedate
+    S_TYPE_ST      : st_type
+    ANN_DT         : anndate
+
+ASHAREINDUSTRIESCLASSCITICS:
+  start_date:
+  ref_date_field: ENTRY_DT
+  mode: r
+  fields:
+    S_INFO_WINDCODE : sid
+    ENTRY_DT        : DataDate
+    INDUSTRIESNAME  : industry
+    LEVELNUM        : level
+
+AINDEXHS300FREEWEIGHT:
+  start_date: 20050101
+  ref_date_field: TRADE_DT
+  mode: a
+  fields:
+    S_CON_WINDCODE : sid
+    S_INFO_WINDCODE: iid
+    TRADE_DT       : DataDate
+    I_WEIGHT       : weight
+
+ASHARECALENDAR:
+  start_date:
+  ref_date_field: TRADE_DAYS
+  mode: r
+  fields:
+    TRADE_DAYS: DataDate
+    S_INFO_EXCHMARKET: ExchangeMkt
+
+AINDEXEODPRICES:
+  start_date: 20060101
+  ref_date_field: TRADE_DT
+  mode: a
+  fields:
+    S_INFO_WINDCODE: iid
+    TRADE_DT       : DataDate
+    S_DQ_CLOSE     : close
+    S_DQ_AMOUNT    : amount
+    S_DQ_PCTCHANGE : ret
+    S_DQ_PRECLOSE  : preclose
+    S_DQ_OPEN      : open
+    S_DQ_HIGH      : high
+    S_DQ_LOW       : low
+    S_DQ_CHANGE    : change
+    S_DQ_VOLUME    : vol
+
+ASHARECHANGEWINDCODE:
+  start_date:
+  ref_date_field: CHANGE_DATE
+  mode: r
+  fields:
+    S_INFO_WINDCODE    : sid
+    S_INFO_OLDWINDCODE : old_code
+    S_INFO_NEWWINDCODE : new_code
+    CHANGE_DATE        : DataDate
